@@ -8,7 +8,7 @@ Frontend (2 versions):
 * Angular
 
 Backend:
-* Spring boot (w/ OpenFeign)
+* Spring Boot (w/ OpenFeign)
 
 ## Authors
 * Eduardo Martínez - [@edwardmartins](https://github.com/edwardmartins)
