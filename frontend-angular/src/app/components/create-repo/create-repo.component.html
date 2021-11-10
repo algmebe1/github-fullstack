@@ -1,0 +1,110 @@
+<app-header [header_title]="title" [header_icon]="icon"></app-header>
+<app-errorstate
+  *ngIf="
+    feedback === ERROR_REQUEST ||
+      feedback === ERROR_SERVER ||
+      feedback === ERROR_UNKNOWN;
+    else elseBlock
+  "
+  [errorMessage]="feedback"
+></app-errorstate>
+<ng-template #elseBlock>
+  <div class="createRepo__container">
+    <form
+      class="createRepo__form"
+      [formGroup]="createRepoForm"
+      (ngSubmit)="createRepo()"
+      ngNativeValidate
+    >
+      <label for="name" class="createRepo__form--label-input">Name</label>
+      <input
+        type="text"
+        name="name"
+        class="createRepo__form--input-field"
+        id="name"
+        formControlName="name"
+        required
+      />
+
+      <label for="description" class="createRepo__form--label-input"
+        >Description</label
+      >
+      <textarea
+        name="description"
+        class="createRepo__form--input-field textarea"
+        id="description"
+        formControlName="description"
+      ></textarea>
+
+      <label for="home" class="createRepo__form--label-input">Home</label>
+      <input
+        type="text"
+        name="home"
+        class="createRepo__form--input-field"
+        id="home"
+        formControlName="homepage"
+      />
+
+      <div class="createRepo__form--checkbox-align">
+        <label class="createRepo__form--label-checkbox">Has issues</label>
+        <div class="createRepo__form--checkbox-item">
+          <input
+            type="checkbox"
+            name="hasIssues"
+            class="createRepo__checkboxQ--style"
+            id="issues"
+            formControlName="has_issues"
+          />
+          <label for="issues" class="switch"></label>
+        </div>
+      </div>
+
+      <div class="createRepo__form--checkbox-align">
+        <label class="createRepo__form--label-checkbox">Has projects</label>
+        <div class="createRepo__form--checkbox-item">
+          <input
+            type="checkbox"
+            name="hasProjects"
+            class="createRepo__checkboxQ--style"
+            id="projects"
+            formControlName="has_projects"
+          />
+          <label for="projects" class="switch"></label>
+        </div>
+      </div>
+
+      <div class="createRepo__form--checkbox-align">
+        <label class="createRepo__form--label-checkbox">Has wiki</label>
+        <div class="createRepo__form--checkbox-item">
+          <input
+            type="checkbox"
+            name="hasWiki"
+            class="createRepo__checkboxQ--style"
+            id="wiki"
+            formControlName="has_wiki"
+          />
+          <label for="wiki" class="switch"></label>
+        </div>
+      </div>
+
+      <div class="createRepo__form--checkbox-align">
+        <label class="createRepo__form--label-checkbox">Private</label>
+        <div class="createRepo__form--checkbox-item">
+          <input
+            type="checkbox"
+            name="isPrivate"
+            class="createRepo__checkboxQ--style"
+            id="private"
+            formControlName="private"
+          />
+          <label for="private" class="switch"></label>
+        </div>
+      </div>
+      <div *ngIf="feedback === SUCCESS_REQUEST" class="message">
+        <p>{{ feedback }}</p>
+        <span (click)="resetFeedback()" class="closebtn">&times;</span>
+      </div>
+      <button type="submit" class="create-btn">CREATE</button>
+    </form>
+  </div>
+</ng-template>

@@ -1,0 +1,14 @@
+.repoList__container {
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+  position: relative;
+}
+
+.gif__loading--repolist {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}

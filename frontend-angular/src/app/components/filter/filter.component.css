@@ -1,0 +1,22 @@
+.filter-elements__container {
+    color: #ffffff;
+    display: inline-flex;
+  }
+  
+  .filter__input {
+    margin-right: 5px;
+  }
+  
+  .filter__input--search{
+    color: rgba(255, 255, 255, 0.5);
+    background-color:transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    transition: 250ms;
+  }
+  
+  .login__label--hidden {
+    visibility: hidden;
+  }

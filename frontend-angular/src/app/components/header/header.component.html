@@ -1,0 +1,12 @@
+<div class="header__container">
+    <div class="navigation__container">
+        <app-navigation [nav_title]="header_title" [nav_icon]="header_icon"></app-navigation>
+    </div>
+    
+    <div class="welcome-and-filter__container">
+        <app-welcome *ngIf="welcome_needed"></app-welcome>
+        <app-filter *ngIf="filter_needed" [(searchText)]="searchText_header" [(ngModel)]="searchText_header"
+        (ngModelChange)="change($event)" ngDefaultControl></app-filter>
+    </div>
+    
+</div>

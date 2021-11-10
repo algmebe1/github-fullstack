@@ -1,0 +1,17 @@
+<div class="repoList__container">
+
+  <app-header [header_title]="title" [welcome_needed]=true [filter_needed]=true [(searchText_header)]="filterText"></app-header>
+  
+  <ng-container *ngIf="repoList | filter:filterText as repoList">
+    <app-repoitem *ngFor="let repo of repoList"  [name]="repo.name" [updated_at]="repo.updated_at" [language]="repo.language" [description]="repo.description" [open_issues]="repo.open_issues" [stargazers_count]="repo.stargazers_count"></app-repoitem>
+    <ng-container *ngIf="!repoList.length" [ngTemplateOutlet]="noItems"></ng-container>
+    <app-create-repo-button></app-create-repo-button>
+  </ng-container>
+
+  <ng-template #noItems>
+    <ng-container *ngIf="!waitForRepoList">
+    <app-emptystate></app-emptystate>
+    </ng-container>
+  </ng-template>
+  
+</div>

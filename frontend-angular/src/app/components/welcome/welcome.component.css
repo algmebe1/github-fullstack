@@ -1,0 +1,16 @@
+.welcome-elements__container {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-right: 24px;
+    display:inline-flex;
+  }
+  
+  .welcome__text{
+    margin-right: 5px;
+  }

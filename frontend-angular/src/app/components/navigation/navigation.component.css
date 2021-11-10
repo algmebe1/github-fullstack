@@ -1,0 +1,16 @@
+.navigation-elements__container {
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #ffffff;
+    display: inline-flex;
+  }
+  
+  .navigation__img{
+    margin-right: 10px;
+    cursor: pointer;
+  }

@@ -1,0 +1,47 @@
+<div class="repo__card">
+    <div class="repo__title--box">
+      <p class="repo__title">{{name}}</p>
+      <div class="repo__expand--icon">
+        <label>
+          <input class="toggle" type="checkbox" (click)="toggle()"/>
+          <span></span>
+        </label>
+      </div>
+    </div>
+    <p class="repo__last-update">{{dateFormatter(updated_at!)}}</p>
+
+    <div class="repo__language--container">
+        <div *ngIf="language" class="repo__language--shadow">
+          <div class="repo__language--color" [style.background-color]=getLanguageColor(language)></div>
+          <div class="repo__language">{{language}}</div>
+        </div>
+    </div>
+
+    <div *ngIf="checked" class="repo__details">
+
+        <div class="repo__divider"></div>
+
+        <p class="repo__details--description">{{description}}</p>
+
+        <div class="repo__details--issues-and-stars">
+          <div class="repo__details--open-issues">
+            <img class="repo__open-isues--icon" src="../../../assets/images/RepoItem/warning.svg" alt="warning-icon" />
+            <div class="repo__open-isues--text">Open issues</div>
+            <div class="repo__open-isues--count">{{open_issues}}</div>
+          </div>
+          <div class="repo__details--stars">
+            <img class="repo__star--icon" src="../../../assets/images/RepoItem/star.svg" alt="star-icon" />
+            <div class="repo__stars--text">Stars</div>
+            <div class="repo__stars--count">{{stargazers_count}}</div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+

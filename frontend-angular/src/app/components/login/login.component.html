@@ -1,0 +1,46 @@
+<div class="login__container">
+  <img
+    src="../../../assets/images/GitHubLogos/git-login.png"
+    alt="github-logo"
+  />
+  <form class="login__input">
+    <label for="username" class="login__label--hidden">Username</label>
+    <input
+      type="text"
+      class="login__input--username"
+      id="username"
+      placeholder="Username"
+      #userName
+    />
+
+    <label for="pat" class="login__label--hidden">Token</label>
+    <input
+      type="password"
+      class="login__input--access-token"
+      id="pat"
+      placeholder="Personal Access Token"
+      #pat
+    />
+
+    <div *ngIf="feedback" class="errorMsg">
+      <p>{{ feedback }}</p>
+      <span (click)="resetFeedback()" class="closebtn">&times;</span>
+    </div>
+
+    <button
+      class="login__input--submit"
+      (click)="onSubmit(userName.value, pat.value)"
+    >
+      LOG IN
+    </button>
+  </form>
+
+  <div class="login__getPat">
+    <a
+      href="https://github.com/settings/tokens"
+      class="login__getPat--link"
+      target="_blank"
+      >Not an user? Get your PAT</a
+    >
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<app-header [header_title]="title" [header_icon]="icon"></app-header>
+<div class="profile__container">
+  <img class="avatar" src="{{ user.avatar_url }}" alt="user-picture" />
+  <div class="profile__form">
+    <label class="profile__label--text">
+      Username
+      <input
+        type="text"
+        class="profile__form--username"
+        value="{{ user.login }}"
+        name="username"
+        readonly
+      />
+    </label>
+    <label *ngIf="user.email" class="profile__label--text">
+      Email
+      <input
+        type="email"
+        class="profile__form--email"
+        value="{{ user.email }}"
+        name="email"
+        readonly
+      />
+    </label>
+    <label *ngIf="user.company" class="profile__label--text">
+      Company
+      <input
+        type="text"
+        class="profile__form--company"
+        value="{{ user.company }}"
+        name="company"
+        readonly
+      />
+    </label>
+  </div>
+  <button class="profile__logout--button" (click)="onLogOut()">LOG OUT</button>
+</div>

@@ -1,0 +1,20 @@
+<div class="filter-elements__container">
+    <div class="filter__input">
+      <label for="filter" class="filter__label--hidden"></label>
+      <input
+        type="text"
+        placeholder="Search"
+        name="search"
+        class="filter__input--search"
+        id="search"
+        [(ngModel)]="searchText"
+        (ngModelChange)="change($event)"
+      />
+    </div>
+
+    <img
+      class="filter__img"
+      src="../../../assets/images/HeaderIcons/search_white.svg"
+      alt="filter-icon"
+    />
+  </div>

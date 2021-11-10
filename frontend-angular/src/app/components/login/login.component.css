@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.login__container {
+  background-color: #303030;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 50px 0 10px;
+}
+
+.login__input--username,
+.login__input--access-token {
+  display: block;
+  background-color: #303030;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 25px 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  transition: 250ms;
+  padding-bottom: 10px;
+}
+
+.login__input--username:focus,
+.login__input--access-token:focus {
+  outline: none;
+  font-size: medium;
+}
+
+.login__input--submit {
+  background-color: #92cbc5;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.login__input--submit:hover {
+  background-color: #6bc7be;
+  transition: 100ms;
+}
+
+.login__getPat--link {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.login__getPat--link:visited {
+  text-decoration: none;
+}
+
+.login__form--container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__label--hidden {
+  visibility: hidden;
+}
+
+.errorMsg {
+  color: red;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  position: relative;
+  padding: 25px 20px;
+  border: 2px solid red;
+  border-radius: 5px;
+  width: 75%;
+  margin: 20px auto;
+}
+
+.errorMsg p {
+  text-align: center;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: x-large;
+  margin-right: 5px;
+  font-family: "Permanent Marker", cursive;
+  line-height: 20px;
+}
+
+.closebtn:hover {
+  font-size: large;
+  transition: 500ms;
+}

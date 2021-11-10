@@ -1,0 +1,169 @@
+.createRepo__container {
+  padding-top: 140px;
+  background-color: #303030;
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.createRepo__form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.createRepo__form--label-input {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.createRepo__form--input-field {
+  background-color: #303030;
+  border: none;
+  border-bottom: 1px solid white;
+  color: #fff;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 250ms;
+  padding-bottom: 10px;
+}
+
+.createRepo__form--input-field:focus {
+  outline: none;
+  font-size: large;
+}
+
+.createRepo__form--label-checkbox {
+  color: #fff;
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+input[type="checkbox"]:checked + .switch {
+  background-color: rgba(127, 202, 195, 0.5);
+  border: 1.5px solid rgba(127, 202, 195, 0.5);
+}
+input[type="checkbox"]:checked + .switch:before {
+  transform: translateX(20px);
+  background-color: #80cbc4;
+}
+
+.switch {
+  display: flex;
+  width: 40px;
+  height: 20px;
+  border: 1.5px solid white;
+  border-radius: 22em;
+  position: relative;
+  transition: transform 0.75s ease-in-out;
+  transform-origin: 50% 50%;
+  cursor: pointer;
+}
+.switch:before {
+  transition: transform 0.75s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  top: 2.66px;
+  left: 2.66px;
+}
+
+.createRepo__form--checkbox-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.createRepo__form--checkbox-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.create-btn {
+  background-color: #92cbc5;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.create-btn:hover {
+  background-color: #6bc7be;
+  transition: 100ms;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.createRepo__goBack--button {
+  padding: 5px 10px;
+  margin: 20px 0;
+  border: 2px solid #6bc7be;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: small;
+}
+
+.createRepo__goBack--button:hover {
+  background-color: hsl(173, 16%, 20%);
+}
+
+.message {
+  color: green;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  position: relative;
+  padding: 25px 20px;
+  border: 2px solid green;
+  border-radius: 5px;
+  width: 75%;
+  margin: 20px auto;
+}
+
+.message p {
+  text-align: center;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: x-large;
+  margin-right: 5px;
+  font-family: "Permanent Marker", cursive;
+  line-height: 20px;
+}
+
+.closebtn:hover {
+  font-size: large;
+  transition: 500ms;
+}
